@@ -13,6 +13,7 @@ int main() {
   auto ground_material = make_shared<lambertian>(color(0.5, 0.5, 0.5));
   world.add(make_shared<sphere>(point3(0,-1000,0), 1000, ground_material));
 
+  // Small spheres on the ground
   for (int a = -11; a < 11;  a++) {
     for (int b = -11; b < 11; b++) {
       auto choose_mat = random_double();
@@ -41,6 +42,8 @@ int main() {
     }
   }
 
+  // Larger spheres that stand out
+
   auto material1 = make_shared<dielectric>(1.5);
   world.add(make_shared<sphere>(point3(0, 1, 0), 1.0, material1));
 
@@ -50,6 +53,8 @@ int main() {
   auto material3 = make_shared<metal>(color(0.7, 0.6, 0.5), 0.0);
   world.add(make_shared<sphere>(point3(4, 1, 0), 1.0, material3));
 
+
+  // Camera settings
 
   camera cam;
 
@@ -65,6 +70,7 @@ int main() {
 
   cam.defocus_angle = 0.6;
   cam.focus_dist    = 10.0;
+
 
   cam.render(world);
 }
