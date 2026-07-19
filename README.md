@@ -7,7 +7,7 @@ PBR Material types
 - Metallic
 - Dielectric
 
-## Screenshots
+## Progress
 ![First render](/progress/sphere1.png)  
 First render
 
