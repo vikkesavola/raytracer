@@ -1,13 +1,21 @@
 # Ray Tracer
 ![Final render](/progress/sphere18_final_render.png)
 
+## Features
 
 PBR Material types
 - Diffuse (Lambertian)
 - Metallic
 - Dielectric
 
-## Progress
+## Running the Program
+
+1. Create a scene by creating spheres and tweaking camera settings in main.cc  
+2. `cmake -B build`  
+3. `cmake --build build --config Release ; ./build/Release/raytracer.exe > image.ppm`  
+4. Open the image.ppm file in a ppm viewer  
+
+## The Process
 ![First render](/progress/sphere1.png)  
 First render
 
@@ -52,3 +60,7 @@ Depth of field added
 
 ![Final render](/progress/sphere18_final_render.png)  
 Final render with all features
+
+
+## Guide by Peter Shirley:  
+https://raytracing.github.io/books/RayTracingInOneWeekend.html
